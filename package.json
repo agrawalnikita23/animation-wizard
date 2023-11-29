@@ -1,0 +1,67 @@
+{
+  "name": "@wbm-npm/dw-canvas",
+  "version": "5.2.27",
+  "description": "A stroybook 6 with TypeScript demo",
+  "license": "proprietary",
+  "repository": "git@github.com:designwizard-com/dw-canvas.git",
+  "main": "lib/index.js",
+  "types": "lib/index.d.ts",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "storybook": "start-storybook -p 6006",
+    "build-storybook": "build-storybook",
+    "build": "run-s clean webpack-build copy-package",
+    "webpack-build": "webpack --config webpack.config.js && cp package.json lib/",
+    "prepublishOnly": "npm run build",
+    "copy-package": "cp package.json lib/",
+    "clean": "rm -rf build"
+  },
+  "np": {
+    "publish": false,
+    "tests": false
+  },
+  "keywords": [
+    "stroybook",
+    "react",
+    "typescript"
+  ],
+  "author": "Prateek Surana",
+  "devDependencies": {
+    "@babel/core": "^7.15.0",
+    "@rollup/plugin-commonjs": "^20.0.0",
+    "@rollup/plugin-node-resolve": "^13.0.4",
+    "@storybook/addon-actions": "^6.3.7",
+    "@storybook/addon-essentials": "^6.3.7",
+    "@storybook/addon-links": "^6.3.7",
+    "@storybook/react": "^6.3.7",
+    "@testing-library/react": "^12.0.0",
+    "@types/react": "^17.0.19",
+    "@types/webpack-env": "^1.16.2",
+    "babel-loader": "^8.2.2",
+    "npm-run-all": "^4.1.5",
+    "postcss": "^8.3.6",
+    "process": "0.11.10",
+    "react": "^16.14.0",
+    "react-dom": "^16.14.0",
+    "rollup": "^2.56.3",
+    "rollup-plugin-peer-deps-external": "^2.2.4",
+    "rollup-plugin-postcss": "^4.0.1",
+    "rollup-plugin-typescript2": "^0.30.0",
+    "ts-loader": "^8.3.0",
+    "typescript": "^4.4.2",
+    "webpack-cli": "^4.9.1"
+  },
+  "peerDependencies": {
+    "react": "^17.0.1",
+    "react-dom": "^17.0.1"
+  },
+  "dependencies": {
+    "@types/styled-components": "^5.1.13",
+    "fabric": "5.2.4",
+    "lodash": "^4.17.21",
+    "react-dnd": "^14.0.5",
+    "react-dnd-html5-backend": "^14.0.2",
+    "safe-json-stringify": "^1.2.0",
+    "styled-components": "^5.3.1"
+  }
+}

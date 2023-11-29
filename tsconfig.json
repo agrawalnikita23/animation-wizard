@@ -1,0 +1,30 @@
+{
+  "compilerOptions": {
+    "allowJs": true,
+    "noImplicitAny": false,
+    "skipLibCheck": true,
+    "moduleResolution": "node",
+    "target": "es6",
+    "module": "es2015",
+    "lib": ["ES2015", "ES2016", "ES2017", "DOM"],
+    "strict": true,
+    "sourceMap": true,
+    "declaration": true,
+    "allowSyntheticDefaultImports": true,
+    "experimentalDecorators": true,
+    "emitDecoratorMetadata": true,
+    "outDir": "lib/",
+    "jsx": "react",
+    "typeRoots": ["node_module/@types"],
+    "types": [
+      "webpack-env"
+    ]
+  },
+  "include": ["src/**/*"],
+  "exclude": [
+    "node_modules",
+    "src/**/*.stories.tsx",
+    "build"
+  ],
+  "files": ["./react-env.d.ts"]
+}
